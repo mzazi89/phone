@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Phone</string>
+
+    <string name="tab_keypad">Keypad</string>
+    <string name="tab_contacts">Contacts</string>
+    <string name="tab_recents">Recents</string>
+
+    <string name="dial_hint">Enter a number</string>
+    <string name="smart_dial_empty">Start typing a name or number</string>
+    <string name="search_contacts">Search contacts</string>
+
+    <string name="contacts_permission_title">Your contacts, on your device</string>
+    <string name="contacts_permission_body">To show names while you dial and to search your address book, this app needs access to your contacts. Nothing is uploaded anywhere.</string>
+    <string name="contacts_permission_action">Allow access</string>
+    <string name="contacts_empty">No contacts found</string>
+
+    <string name="recents_empty">No calls yet</string>
+    <string name="recents_clear">Clear</string>
+    <string name="recents_today">Today</string>
+
+    <string name="call">Call</string>
+    <string name="backspace">Backspace</string>
+    <string name="add_contact">Save to contacts</string>
+    <string name="choose_number">Choose a number</string>
+    <string name="no_phone_app">No app available to place calls</string>
+    <string name="call_permission_denied">Calling permission denied — opening the dialler instead</string>
+    <string name="no_matches">No matches</string>
+    <string name="enter_number">Enter a number first</string>
+    <string name="recents_clear_message">Remove the local call history kept by this app? Your carrier and system call log are not touched.</string>
+    <string name="no_contacts_app">No contacts app available</string>
+    <string name="cancel">Cancel</string>
+</resources>
