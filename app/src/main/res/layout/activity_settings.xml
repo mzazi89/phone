@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="22dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/tab_bg"
+            android:clickable="true"
+            android:contentDescription="@string/back"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow"
+            android:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/settings"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rowDefaultPhone"
+                style="@style/SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SettingTitle"
+                        android:text="@string/default_phone_app" />
+
+                    <TextView
+                        android:id="@+id/tvDefaultPhoneStatus"
+                        style="@style/SettingSummary"
+                        android:text="@string/default_phone_status_check" />
+                </LinearLayout>
+
+                <TextView style="@style/SettingChevron" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowBlocked"
+                style="@style/SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SettingTitle"
+                        android:text="@string/blocked_numbers" />
+
+                    <TextView
+                        android:id="@+id/tvBlockedCount"
+                        style="@style/SettingSummary"
+                        android:text="@string/blocked_none" />
+                </LinearLayout>
+
+                <TextView style="@style/SettingChevron" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <LinearLayout style="@style/SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SettingTitle"
+                        android:text="@string/whatsapp_enhancement" />
+
+                    <TextView
+                        style="@style/SettingSummary"
+                        android:text="@string/whatsapp_enhancement_summary" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchWhatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <LinearLayout style="@style/SettingRow">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/SettingTitle"
+                        android:text="@string/haptics" />
+
+                    <TextView
+                        style="@style/SettingSummary"
+                        android:text="@string/haptics_summary" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchHaptics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowSim"
+                style="@style/SettingRow">
+
+                <TextView
+                    style="@style/SettingTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/sim_settings" />
+
+                <TextView style="@style/SettingChevron" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowSounds"
+                style="@style/SettingRow">
+
+                <TextView
+                    style="@style/SettingTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/sounds_vibration" />
+
+                <TextView style="@style/SettingChevron" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+
+            <LinearLayout
+                android:id="@+id/rowAbout"
+                style="@style/SettingRow">
+
+                <TextView
+                    style="@style/SettingTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/about" />
+
+                <TextView style="@style/SettingChevron" />
+            </LinearLayout>
+
+            <View style="@style/SettingDivider" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

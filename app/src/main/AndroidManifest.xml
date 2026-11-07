@@ -3,11 +3,21 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-    <!-- Tablets without a SIM can still browse contacts and share numbers. -->
+    <!-- Tablets without a SIM can still browse contacts and show history. -->
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -27,7 +37,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!-- Open tel: links and "dial this number" requests in this app. -->
+            <!-- Required for the default-dialer role, and lets other apps hand
+                 a number to this dialler. -->
             <intent-filter>
                 <action android:name="android.intent.action.DIAL" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -41,5 +52,34 @@
                 <data android:scheme="tel" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".InCallActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:theme="@style/Theme.Phone" />
+
+        <!-- The in-call service Android binds while a call is up. Holding this
+             is what lets the app draw the call screen itself. -->
+        <service
+            android:name=".PhoneCallService"
+            android:exported="true"
+            android:permission="android.permission.BIND_INCALL_SERVICE">
+            <meta-data
+                android:name="android.telecom.IN_CALL_SERVICE_UI"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.telecom.InCallService" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>

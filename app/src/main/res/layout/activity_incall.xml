@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/incall_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="24dp"
+    android:paddingTop="56dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="36dp">
+
+    <TextView
+        android:id="@+id/tvCallState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.06"
+        android:text="@string/call_connecting"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvCallAvatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/avatar_bg"
+        android:gravity="center"
+        android:textColor="@color/accent"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCallName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/text_primary"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCallNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp" />
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <GridLayout
+        android:id="@+id/dtmfPad"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:visibility="gone" />
+
+    <!-- Incoming: decline / answer -->
+    <LinearLayout
+        android:id="@+id/ringingControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnDecline"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/round_button_danger"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/call_decline_glyph"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/call_decline"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnAnswer"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/call_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/call_answer_glyph"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/call_answer"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Active: mute / speaker / keypad / end -->
+    <LinearLayout
+        android:id="@+id/activeControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnMute"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:alpha="0.55"
+                android:text="@string/call_mute"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnSpeaker"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:alpha="0.55"
+                android:text="@string/call_speaker"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnDtmfToggle"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_button_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/call_keypad"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnEnd"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_button_danger"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/call_end_glyph"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

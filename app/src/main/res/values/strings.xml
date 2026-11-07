@@ -2,32 +2,88 @@
 <resources>
     <string name="app_name">Phone</string>
 
+    <string name="tab_recents">Recents</string>
     <string name="tab_keypad">Keypad</string>
     <string name="tab_contacts">Contacts</string>
-    <string name="tab_recents">Recents</string>
 
+    <!-- Recents -->
+    <string name="recents_all">All</string>
+    <string name="recents_missed">Missed Calls</string>
+    <string name="recents_empty">No calls yet</string>
+    <string name="calllog_permission_title">Call history</string>
+    <string name="calllog_permission_body">To show your recent calls, this app needs access to the call log and phone state. Nothing is uploaded anywhere.</string>
+    <string name="call_missed">Missed</string>
+    <string name="call_blocked">Blocked</string>
+    <string name="call_outgoing">Outgoing</string>
+    <string name="call_incoming_type">Incoming</string>
+    <string name="unknown_caller">Unknown</string>
+
+    <!-- Keypad -->
     <string name="dial_hint">Enter a number</string>
-    <string name="smart_dial_empty">Start typing a name or number</string>
-    <string name="search_contacts">Search contacts</string>
+    <string name="smart_dial_empty">Type a name or number</string>
+    <string name="no_matches">No matches</string>
+    <string name="enter_number">Enter a number first</string>
+    <string name="call">Call</string>
+    <string name="backspace">Backspace</string>
+    <string name="add_contact">Save to contacts</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="whatsapp_glyph">WA</string>
+    <string name="no_whatsapp">No app available for WhatsApp</string>
+    <string name="choose_number">Choose a number</string>
+    <string name="no_phone_app">No app available to place calls</string>
+    <string name="call_permission_denied">Calling permission denied — opening the dialler instead</string>
 
+    <!-- Contacts -->
+    <string name="search_contacts">Search contacts</string>
     <string name="contacts_permission_title">Your contacts, on your device</string>
     <string name="contacts_permission_body">To show names while you dial and to search your address book, this app needs access to your contacts. Nothing is uploaded anywhere.</string>
     <string name="contacts_permission_action">Allow access</string>
     <string name="contacts_empty">No contacts found</string>
 
-    <string name="recents_empty">No calls yet</string>
-    <string name="recents_clear">Clear</string>
-    <string name="recents_today">Today</string>
+    <!-- In call -->
+    <string name="call_connecting">Connecting…</string>
+    <string name="call_dialing">Calling…</string>
+    <string name="call_incoming">Incoming call</string>
+    <string name="call_held">On hold</string>
+    <string name="call_ending">Ending call…</string>
+    <string name="call_ended">Call ended</string>
+    <string name="call_answer">Answer</string>
+    <string name="call_decline">Decline</string>
+    <string name="call_mute">Mute</string>
+    <string name="call_speaker">Speaker</string>
+    <string name="call_keypad">Keypad</string>
+    <string name="call_answer_glyph">✆</string>
+    <string name="call_decline_glyph">✕</string>
+    <string name="call_end_glyph">✕</string>
 
-    <string name="call">Call</string>
-    <string name="backspace">Backspace</string>
-    <string name="add_contact">Save to contacts</string>
-    <string name="choose_number">Choose a number</string>
-    <string name="no_phone_app">No app available to place calls</string>
-    <string name="call_permission_denied">Calling permission denied — opening the dialler instead</string>
-    <string name="no_matches">No matches</string>
-    <string name="enter_number">Enter a number first</string>
-    <string name="recents_clear_message">Remove the local call history kept by this app? Your carrier and system call log are not touched.</string>
-    <string name="no_contacts_app">No contacts app available</string>
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="default_phone_app">Default phone app</string>
+    <string name="default_phone_status_check">Checking…</string>
+    <string name="default_phone_status_on">Phone handles your calls</string>
+    <string name="default_phone_status_off">Tap to make Phone your default phone app</string>
+    <string name="blocked_numbers">Blocked numbers</string>
+    <string name="blocked_none">None</string>
+    <string name="blocked_count">%1$d blocked</string>
+    <string name="blocked_add">Add a number…</string>
+    <string name="blocked_remove_confirm">Stop blocking %1$s?</string>
+    <string name="whatsapp_enhancement">WhatsApp button</string>
+    <string name="whatsapp_enhancement_summary">Show a WhatsApp shortcut next to the call button.</string>
+    <string name="haptics">Haptic feedback</string>
+    <string name="haptics_summary">Vibrate when you tap a key.</string>
+    <string name="sim_settings">SIM &amp; network settings</string>
+    <string name="sounds_vibration">Sounds &amp; vibration</string>
+    <string name="about">About</string>
+    <string name="remove">Remove</string>
+    <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="add">Add</string>
+    <string name="about_body">Phone %1$s\n\nA lightweight dialler: T9 keypad, contact search, dual-SIM calling and an in-call screen, all on device. No internet permission.\n\nSource: github.com/mzazi89/phone</string>
+    <string name="role_dialog_title">Make Phone your default app?</string>
+    <string name="role_dialog_body">To handle incoming calls and show the in-call screen, Android needs Phone to be your default phone app. You can change this any time in Settings.</string>
+    <string name="role_dialog_confirm">Set as default</string>
+    <string name="not_now">Not now</string>
+    <string name="no_contacts_app">No contacts app available</string>
 </resources>
